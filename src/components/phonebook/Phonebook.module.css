@@ -1,4 +1,6 @@
 .phonebook {
+  margin: auto;
+  width: 400px;
 }
 .form {
   border: solid black;
