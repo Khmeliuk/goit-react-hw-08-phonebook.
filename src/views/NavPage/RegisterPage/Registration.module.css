@@ -1,0 +1,29 @@
+.forum {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  margin: auto;
+  margin-top: 30px;
+}
+.input {
+  margin-bottom: 10px;
+}
+.label {
+  margin: auto;
+}
+.button {
+  width: 100px;
+  height: 30px;
+  background-color: #fff;
+  color: blueviolet;
+  margin: auto;
+}
+.button:hover {
+  background-color: violet;
+  color: white;
+  border: solid white 1px;
+  margin: auto;
+}
