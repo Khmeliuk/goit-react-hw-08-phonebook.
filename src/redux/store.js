@@ -3,15 +3,12 @@ import { filterReducer } from "./filterReducer";
 import { itemReducer, loading } from "./itemReducer";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { authSlice } from "./slice";
+import { authSlice } from "./authRedax/slice";
 const contactsReducer = combineReducers({
   items: itemReducer,
   filter: filterReducer,
   loading: loading,
 });
-
-const rootReducer = combineReducers({ contacts: contactsReducer });
-const rootAuthReducer = combineReducers({ auth: authSlice.reducer });
 
 const authPersistConfig = {
   key: "auth",

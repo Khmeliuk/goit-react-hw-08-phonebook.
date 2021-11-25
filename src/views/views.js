@@ -1,18 +1,26 @@
-import { Route, Routes } from "react-router-dom";
-import HomePage from "./NavPage/HomePage/HomePage";
+import { Route, Switch } from "react-router-dom";
+
 import LoginPage from "./NavPage/LoginPage/LoginPage";
-import Contact from "./NavPage/ContactsPage/ContactsPage";
+
 import Register from "./NavPage/RegisterPage/RegisterPage";
 import Phonebook from "../components/phonebook/Phonebook";
+import PrivetRoute from "../router/privetPage";
+import PublicRout from "../router/PublicRoute";
+
 const AppBar = () => {
   return (
-    <Routes>
-      {/* <Route exact path="/" element={< />} /> */}
-      <Route exact path="/register" element={<Register />} />
-      <Route exact path="/login" element={<LoginPage />} />
-      <Route exact path="/contacts" element={<Phonebook />} />
-      {/* <Navigate to="/" /> */}
-    </Routes>
+    <Switch>
+      <PrivetRoute exact path="/contacts">
+        <Phonebook />
+      </PrivetRoute>
+      <PublicRout restricted exact path="/register">
+        <Register />
+      </PublicRout>
+      <PublicRout restricted exact path="/login">
+        <LoginPage />
+      </PublicRout>
+      <Route exact path="/" />
+    </Switch>
   );
 };
 export default AppBar;

@@ -1,7 +1,7 @@
-import axios from "axios";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "../../../redux/operation";
+
+import { login } from "../../../redux/authRedax/outhOperation";
 import s from "./Login.module.css";
 
 const LoginPage = () => {

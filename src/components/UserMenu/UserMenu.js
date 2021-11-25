@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { getUserEmail } from "../../contacts-selectors";
-import { logout } from "../../redux/operation";
+import { getUserEmail } from "../../redux/authRedax/outh-selector";
+import { logout } from "../../redux/authRedax/outhOperation";
 import s from "./User.module.css";
 const UserMenu = () => {
   const dispatch = useDispatch();

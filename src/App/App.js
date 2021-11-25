@@ -1,12 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchCurrentUser, fetchItems } from "../redux/operation";
+import { fetchCurrentUser } from "../redux/authRedax/outhOperation";
 import Nav from "../views/Nav";
-import Vieews from "../views/views";
+import { fetchItems } from "../redux/operation";
 import UserMenu from "../components/UserMenu/UserMenu";
-import { getisLogin } from "../contacts-selectors";
+import { getisLogin } from "../redux/authRedax/outh-selector";
 import SiteNav from "../views/siteNav";
-
+import AppBar from "../views/views";
 export default function App() {
   const islogin = useSelector((state) => getisLogin(state));
   const isLoading = useSelector((state) => state.contacts.loading);
@@ -22,9 +22,8 @@ export default function App() {
   return (
     <div>
       {islogin ? <UserMenu /> : <SiteNav />}
-
       <Nav />
-      <Vieews />
+      <AppBar />
     </div>
   );
 }

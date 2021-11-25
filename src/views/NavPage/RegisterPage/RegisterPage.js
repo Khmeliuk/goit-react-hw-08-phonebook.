@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { register } from "../../../redux/operation";
+import { register } from "../../../redux/authRedax/outhOperation";
 import s from "./Registration.module.css";
 
 const Register = () => {
